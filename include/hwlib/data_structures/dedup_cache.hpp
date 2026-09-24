@@ -4,7 +4,7 @@
 #include <cstddef>
 #include <cstdint>
 
-namespace integra
+namespace hwlib::data_structures
 {
 
 /// Fixed-capacity FIFO cache of recently-seen ids, used to detect a
@@ -46,4 +46,4 @@ private:
     std::size_t m_count{0U};
 };
 
-} // namespace integra
+} // namespace hwlib::data_structures

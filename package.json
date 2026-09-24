@@ -1,5 +1,5 @@
 {
-  "name": "integra-dedup-cache",
+  "name": "hwlib-dedup-cache",
   "private": true,
   "devDependencies": {
     "@commitlint/cli": "^19.5.0",

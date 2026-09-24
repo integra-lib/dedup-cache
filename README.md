@@ -2,23 +2,23 @@
 
 Fixed-capacity FIFO of recently seen ids, for telling a retransmission from a new message.
 
-Part of [integra-lib](https://github.com/integra-lib) — architecture-independent C++20
+Part of [hwlib](https://github.com/integra-lib) — architecture-independent C++20
 components shared between firmware projects. Header-only,
 no exceptions, no RTTI.
 
 ## Use it
 
 ```bash
-git submodule add git@github.com:integra-lib/dedup-cache.git external/integra/dedup-cache
+git submodule add git@github.com:integra-lib/dedup-cache.git external/hwlib/dedup-cache
 ```
 
 ```cmake
-add_subdirectory(external/integra/dedup-cache)
-target_link_libraries(app PRIVATE Integra::dedup_cache)
+add_subdirectory(external/hwlib/dedup-cache)
+target_link_libraries(app PRIVATE Hwlib::dedup_cache)
 ```
 
 ```cpp
-#include <integra/dedup_cache.hpp>
+#include <hwlib/data_structures/dedup_cache.hpp>
 ```
 
 Each component carries its own include directory, so this header stays unreachable
@@ -31,9 +31,9 @@ Every component is released on its own, tagged `vX.Y.Z`. Pre-1.0, a minor releas
 break the API, which is why dependants accept a single minor.
 
 ```bash
-git -C external/integra/dedup-cache fetch --tags
-git -C external/integra/dedup-cache checkout v0.2.0
-git add external/integra/dedup-cache && git commit -m "build: bump dedup-cache to v0.2.0"
+git -C external/hwlib/dedup-cache fetch --tags
+git -C external/hwlib/dedup-cache checkout v0.2.0
+git add external/hwlib/dedup-cache && git commit -m "build: bump dedup-cache to v0.2.0"
 ```
 
 ## In a consumer's CI
